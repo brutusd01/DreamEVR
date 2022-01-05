@@ -5,8 +5,15 @@ using UnityEngine.XR;
 
 public class VRHands : MonoBehaviour
 {
+    public List<GameObject> controllerTypes;
     private InputDevice targetDevice;
+    private GameObject currentDevice;
     void Start()
+    {
+        GetControllers();
+    }
+
+    private void GetControllers()
     {
         List<InputDevice> devices = new List<InputDevice>();
         InputDeviceCharacteristics rightDeviceCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
@@ -19,17 +26,28 @@ public class VRHands : MonoBehaviour
             Debug.Log(item.name + item.characteristics);
         }
 
-        if(devices.Count > 0)
+        if (devices.Count > 0)
         {
             targetDevice = devices[0];
+            GameObject handType = controllerTypes.Find(controller => controller.name == targetDevice.name);
+            if (handType)
+            {
+                currentDevice = Instantiate(handType, transform);
+            }
+
+            else
+            {
+                Debug.Log("Can't find identify controller.");
+                currentDevice = Instantiate(controllerTypes[0], transform);
+            }
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //TODO: Factor code to shorten these to variables
-        //TODO: Create an input manager and a player spawner.
+       //TODO: Factor code to shorten these to variables
+       //TODO: Create an input manager and a player spawner.
        // targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primButtonValue);
         if(targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primButtonValue) && primButtonValue)
         {
