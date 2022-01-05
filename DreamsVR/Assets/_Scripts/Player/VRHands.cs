@@ -66,8 +66,6 @@ public class VRHands : MonoBehaviour
         }
         else
         {
-            
-
             if (showController)
             {
             currentDevice.SetActive(true);
@@ -79,7 +77,6 @@ public class VRHands : MonoBehaviour
             {
             currentDevice.SetActive(false);
             currentHands.SetActive(true);
-            
             UpdateAnims();
             }
  
