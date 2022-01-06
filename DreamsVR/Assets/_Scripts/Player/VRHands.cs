@@ -10,6 +10,7 @@ public class VRHands : MonoBehaviour
     public InputDeviceCharacteristics deviceCharacteristics;
     public List<GameObject> controllerTypes;
     public GameObject handModel;
+    public GameObject teleportRay;
     private Animator anim;
     private InputDevice targetDevice;
     private GameObject currentDevice;
@@ -132,7 +133,6 @@ public class VRHands : MonoBehaviour
         if (targetDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 inputAxis) && inputAxis != Vector2.zero)
         {
             //TODO: Movement here!
-           // Debug.Log("Primary Touchpad " + inputAxis);
         }
     }
 }
