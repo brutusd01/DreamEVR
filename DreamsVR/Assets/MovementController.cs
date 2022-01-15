@@ -56,6 +56,7 @@ public class MovementController : MonoBehaviour
         {
             Quaternion headYaw = Quaternion.Euler(0, rig.Camera.transform.eulerAngles.y, 0);
             Vector3 moveVector = headYaw * new Vector3(inputAxis.x, vSpeed, inputAxis.y);
+            vSpeed = Physics.gravity.y;
             character.Move(moveVector * Time.fixedDeltaTime * speed);
         }
     }
