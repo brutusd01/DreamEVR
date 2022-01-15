@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class MovementController : MonoBehaviour
 {
-    //TODO: Be able to set MoveType in game.
+    //TODO: Be able to set MoveType in game via settings.
     public enum MoveType {Teleport, Continuous }
     private MoveType move;
     [Header("Teleport Movement")]
@@ -21,14 +22,16 @@ public class MovementController : MonoBehaviour
     public XRNode input;
     private Vector2 inputAxis;
     private CharacterController character;
+    private XROrigin rig;
 
     private void Start()
     {
         if(!character)character = GetComponent<CharacterController>();
+        if (!rig) rig = GetComponent<XROrigin>();
     }
     void Update()
     {
-        //if (move==MoveType.Teleport)
+        //TODO: Update this to be a switch(move) function
         if(Teleport)
         {
             if (leftTele)
@@ -51,7 +54,8 @@ public class MovementController : MonoBehaviour
     {
         if (!Teleport)
         {
-            Vector3 moveVector = new Vector3(inputAxis.x, vSpeed, inputAxis.y);
+            Quaternion headYaw = Quaternion.Euler(0, rig.Camera.transform.eulerAngles.y, 0);
+            Vector3 moveVector = headYaw * new Vector3(inputAxis.x, vSpeed, inputAxis.y);
             character.Move(moveVector * Time.fixedDeltaTime * speed);
         }
     }
