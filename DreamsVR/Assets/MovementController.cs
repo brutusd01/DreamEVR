@@ -22,6 +22,8 @@ public class MovementController : MonoBehaviour
     public float terminalVelocity = -200f;
     public float damp = .25f;
     public XRNode input;
+    [Header("Variables")]
+    public float extraHeight;
     private Vector2 inputAxis;
     private CharacterController character;
     private XROrigin rig;
@@ -67,6 +69,7 @@ public class MovementController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        heightControl();
         if (!Teleport)
         {           
             Quaternion headYaw = Quaternion.Euler(0, rig.Camera.transform.eulerAngles.y, 0);
@@ -79,5 +82,14 @@ public class MovementController : MonoBehaviour
     {
         InputHelpers.IsPressed(controller.inputDevice, teleportInput, out bool isPressed, deadZone);
         return isPressed;
+    
+    
+    }
+    void heightControl()
+    {
+        //This updates the player height to match how high the camera is, allows for prone height changes.
+        character.height = rig.CameraInOriginSpaceHeight + extraHeight;
+        Vector3 center = transform.InverseTransformPoint(rig.Camera.transform.position);
+        character.center = new Vector3(center.x,character.height/2 + character.skinWidth, center.z);
     }
 }
