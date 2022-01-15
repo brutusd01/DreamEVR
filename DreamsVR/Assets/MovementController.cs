@@ -19,6 +19,8 @@ public class MovementController : MonoBehaviour
     [Header("Continuous")]
     public float speed = 1.5f;
     public float vSpeed;
+    public float terminalVelocity = -200f;
+    public float damp = .25f;
     public XRNode input;
     private Vector2 inputAxis;
     private CharacterController character;
@@ -49,14 +51,26 @@ public class MovementController : MonoBehaviour
             device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
         }
     }
-
+    float Gravity()
+    {
+        if (character.isGrounded)
+        {
+            vSpeed = Physics.gravity.y;
+        }
+        else
+        {
+            vSpeed += Physics.gravity.y * Time.fixedDeltaTime;
+            Mathf.Clamp(vSpeed, 100, terminalVelocity); //This is to prevent the player from going past a certain fall speed.
+        }
+        //TODO: Add jump functionality here! 
+            return (vSpeed * damp);
+    }
     private void FixedUpdate()
     {
         if (!Teleport)
-        {
+        {           
             Quaternion headYaw = Quaternion.Euler(0, rig.Camera.transform.eulerAngles.y, 0);
-            Vector3 moveVector = headYaw * new Vector3(inputAxis.x, vSpeed, inputAxis.y);
-            vSpeed = Physics.gravity.y;
+            Vector3 moveVector = headYaw * new Vector3(inputAxis.x, Gravity(), inputAxis.y);
             character.Move(moveVector * Time.fixedDeltaTime * speed);
         }
     }
