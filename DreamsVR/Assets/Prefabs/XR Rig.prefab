@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1556264751
 Transform:
   m_ObjectHideFlags: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
   m_ControllerNode: 4
-  m_SelectUsage: 3
+  m_SelectUsage: 14
   m_ActivateUsage: 2
   m_UIPressUsage: 2
   m_AxisToPressThreshold: 0.1
@@ -866,6 +866,8 @@ GameObject:
   - component: {fileID: 175383631201556938}
   - component: {fileID: 5123099622289898245}
   - component: {fileID: 235600433318421305}
+  - component: {fileID: 235600433318421309}
+  - component: {fileID: 235600433318421310}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Player
@@ -944,14 +946,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960d5a1eabbe5a45978acd3f329be20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Teleport: 1
+  Teleport: 0
   leftTele: {fileID: 8958636801984472623}
   rightTele: {fileID: 1556264747}
   teleportInput: 14
-  deadZone: 0.1
+  deadZone: 0.25
   speed: 1.5
   vSpeed: 0
-  input: 0
+  terminalVelocity: -200
+  damp: 0.25
+  input: 5
+  extraHeight: 0
+--- !u!143 &235600433318421309
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577179527882304354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.09
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &235600433318421310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577179527882304354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4f2c0214c9b494fa7eb5b8b2c02885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 175383631201556938}
+  m_TurnAmount: 45
+  m_DebounceTime: 0.2
+  m_EnableTurnLeftRight: 1
+  m_EnableTurnAround: 1
+  m_TurnUsage: 0
+  m_Controllers:
+  - {fileID: 3577179526027469885}
+  m_DeadZone: 0.75
 --- !u!1 &8440018656360042151
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,7 +1015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3937826978731877316
 Transform:
   m_ObjectHideFlags: 0
@@ -1008,7 +1052,7 @@ MonoBehaviour:
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
   m_ControllerNode: 5
-  m_SelectUsage: 3
+  m_SelectUsage: 14
   m_ActivateUsage: 2
   m_UIPressUsage: 2
   m_AxisToPressThreshold: 0.1
