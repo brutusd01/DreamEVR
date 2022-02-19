@@ -780,7 +780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051459748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.22641754, y: 0.78, z: 1.082783}
+  m_LocalPosition: {x: -0.22641754, y: 0.78, z: 1.041}
   m_LocalScale: {x: 2.3273, y: 1, z: 0.064945854}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1362,7 +1362,7 @@ GameObject:
   - component: {fileID: 1510596010}
   - component: {fileID: 1510596009}
   - component: {fileID: 1510596008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2007,32 +2007,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1556264746, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1556264747, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_SelectUsage
-      value: 14
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1556264750, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1753252840}
-    - target: {fileID: 235600433318421305, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: input
-      value: 5
+    - target: {fileID: 3577179526027469859, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 235600433318421305, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: Teleport
-      value: 0
+    - target: {fileID: 3577179526501146568, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 235600433318421305, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: terminalVelocity
-      value: -200
+    - target: {fileID: 3577179527552121407, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577179527761010645, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3577179527882304354, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
       propertyPath: m_Name
       value: XR Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577179527882304354, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3577179527882304380, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
       propertyPath: m_RootOrder
@@ -2079,43 +2083,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5187046027834949785, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_UseForceGrab
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187046027834949785, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1753252840}
     - target: {fileID: 8440018656360042151, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8958636801984472623, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_SelectUsage
-      value: 14
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
---- !u!1 &235600433318421301 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3577179527882304354, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-  m_PrefabInstance: {fileID: 235600433318421300}
-  m_PrefabAsset: {fileID: 0}
---- !u!143 &235600433318421309
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235600433318421301}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.09
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
