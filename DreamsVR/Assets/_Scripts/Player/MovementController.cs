@@ -62,12 +62,12 @@ public class MovementController : MonoBehaviour
         else
         {
             vSpeed += Physics.gravity.y * Time.fixedDeltaTime;
-            Mathf.Clamp(vSpeed, 100, terminalVelocity); //This is to prevent the player from going past a certain fall speed.
+            Mathf.Clamp(vSpeed, 0, terminalVelocity); //This is to prevent the player from going past a certain fall speed.
         }
         //TODO: Add jump functionality here! 
             return (vSpeed * damp);
     }
-    private void FixedUpdate()
+    private void FixedUpdate() //May have to change the physics timestep do work better for a VR project.
     {
         heightControl();
         if (!Teleport)
