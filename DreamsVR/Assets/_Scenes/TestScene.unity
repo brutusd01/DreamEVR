@@ -2006,37 +2006,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1556264746, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 1556264750, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1753252840}
-    - target: {fileID: 3577179526027469859, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3577179526501146568, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3577179527552121407, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3577179527761010645, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 3577179527882304354, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
       propertyPath: m_Name
       value: XR Rig
-      objectReference: {fileID: 0}
-    - target: {fileID: 3577179527882304354, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3577179527882304380, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
       propertyPath: m_RootOrder
@@ -2086,9 +2062,5 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1753252840}
-    - target: {fileID: 8440018656360042151, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}

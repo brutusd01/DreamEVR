@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1556264750}
   - component: {fileID: 1556264749}
   - component: {fileID: 1556264748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ray Interactor.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 3577179526027469885}
   - component: {fileID: 3577179526027469884}
   - component: {fileID: 3577179526027469887}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 3577179526501146564}
   - component: {fileID: 3577179526501146565}
   - component: {fileID: 3577179526501146570}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ViewCam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 3577179527552121401}
   - component: {fileID: 3577179527552121400}
   - component: {fileID: 3577179527552121403}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3577179527761010644}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CamOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -868,7 +868,7 @@ GameObject:
   - component: {fileID: 235600433318421305}
   - component: {fileID: 235600433318421309}
   - component: {fileID: 235600433318421310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XR Rig
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -955,7 +955,7 @@ MonoBehaviour:
   vSpeed: 0
   terminalVelocity: -200
   damp: 0.25
-  input: 5
+  input: 4
   extraHeight: 0
 --- !u!143 &235600433318421309
 CharacterController:
@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 5187046027834949785}
   - component: {fileID: 3838549728008186874}
   - component: {fileID: 8752154160485864105}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ray Interactor.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
