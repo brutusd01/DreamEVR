@@ -454,26 +454,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 0802a840c7280c741956e4e360a1f435, type: 3}
   m_PrefabInstance: {fileID: 6904327340039692168}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1653021914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5985408095635399385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23919cbb182255043be657fe47ab26c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barrelLocation: {fileID: 265970607}
-  anim: {fileID: 1061596667680514585}
-  muzzleFlash: {fileID: 100006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
-  projectilePrefab: {fileID: 0}
-  fireSound: {fileID: 8300000, guid: dc30bb409a4c8534499370f5811a6455, type: 3}
-  destroyTimer: 0.5
-  source: {fileID: 1653021917}
-  projectileSpeed: 500
 --- !u!82 &1653021917
 AudioSource:
   m_ObjectHideFlags: 0
@@ -530,7 +510,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.5
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -570,3 +550,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1653021914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5985408095635399385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23919cbb182255043be657fe47ab26c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrelLocation: {fileID: 265970607}
+  anim: {fileID: 1061596667680514585}
+  muzzleFlash: {fileID: 1264579281027549537, guid: 416f0cc26297b874c91c96101326ce4b, type: 3}
+  projectilePrefab: {fileID: 0}
+  fireSound: {fileID: 8300000, guid: 2c940fd5990fab84f97437b4fb57991b, type: 3}
+  destroyTimer: 0.1
+  source: {fileID: 1653021917}
+  projectileSpeed: 500
