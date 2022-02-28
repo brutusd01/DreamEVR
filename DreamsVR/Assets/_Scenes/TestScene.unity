@@ -2028,14 +2028,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1653021917, guid: 71b0dfcf26c07c046b723442b0cf6f9c, type: 3}
-      propertyPath: MaxDistance
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1653021917, guid: 71b0dfcf26c07c046b723442b0cf6f9c, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1138237205724436034, guid: 71b0dfcf26c07c046b723442b0cf6f9c, type: 3}
       propertyPath: m_Name
       value: pistol_p3a
