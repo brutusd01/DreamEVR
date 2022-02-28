@@ -80,7 +80,7 @@ ModelImporter:
       takeName: GunP3A|P3A_Fire
       internalID: 0
       firstFrame: 0
-      lastFrame: 8
+      lastFrame: 5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -99,7 +99,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: Fire
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 23919cbb182255043be657fe47ab26c3, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
