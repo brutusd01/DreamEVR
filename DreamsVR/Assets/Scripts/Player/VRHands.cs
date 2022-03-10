@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
+namespace Player
+{
+    
+
 public class VRHands : MonoBehaviour
 {
     [Header("Variables")]
@@ -121,4 +125,5 @@ public class VRHands : MonoBehaviour
         }
 
     }
+}
 }

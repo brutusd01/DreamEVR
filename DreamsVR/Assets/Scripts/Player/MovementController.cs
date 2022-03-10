@@ -5,7 +5,9 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class MovementController : MonoBehaviour
+namespace Player
+{
+    public class MovementController : MonoBehaviour
 {
     //TODO: Be able to set MoveType in game via settings.
     public enum MoveType {Teleport, Continuous }
@@ -92,4 +94,5 @@ public class MovementController : MonoBehaviour
         Vector3 center = transform.InverseTransformPoint(rig.Camera.transform.position);
         character.center = new Vector3(center.x,character.height/2 + character.skinWidth, center.z);
     }
+}
 }
