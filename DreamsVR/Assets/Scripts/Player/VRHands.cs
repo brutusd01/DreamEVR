@@ -108,31 +108,17 @@ public class VRHands : MonoBehaviour
     }
     private void ReadInputs()
     {
-        //TODO: Factor code to shorten these to variables
+        //TODO: Setup Action Based rather than Device Based
         //TODO: Create an input manager and a player spawner.
-        // targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primButtonValue);
-        if (targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primButtonValue) && primButtonValue)
-        {
-            Debug.Log("Pressed primary!");
-        }
-
-        // targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
         if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float trigger) && trigger > .1f)
         {
             triggerValue = trigger;
-            //Debug.Log("Trigger Value: " + trigger);
         }
 
         if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float grip) && grip > .1f)
         {
             gripValue = grip;
-           // Debug.Log("Grip Value: " + grip);
         }
 
-        //targetDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 inputAxis);
-        if (targetDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 inputAxis) && inputAxis != Vector2.zero)
-        {
-            //TODO: Movement here!
-        }
     }
 }
