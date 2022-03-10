@@ -2055,14 +2055,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1753252840}
-    - target: {fileID: 3577179526027469887, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_HideControllerOnSelect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3577179527552121403, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
-      propertyPath: m_HideControllerOnSelect
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 629999159272018312, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1753252840}
     - target: {fileID: 3577179527882304354, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
       propertyPath: m_Name
       value: XR Rig
@@ -2115,6 +2111,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1753252840}
+    - target: {fileID: 8013889878465708684, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1753252840}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 826f3625530cc4d46ba6bd5100f4d748, type: 3}
 --- !u!1001 &1138237205943580713
@@ -2132,6 +2132,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1753252840}
+    - target: {fileID: 1138237205724436037, guid: 71b0dfcf26c07c046b723442b0cf6f9c, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1138237205724436038, guid: 71b0dfcf26c07c046b723442b0cf6f9c, type: 3}
       propertyPath: m_RootOrder
       value: 1
